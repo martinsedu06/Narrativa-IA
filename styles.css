@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; 
+    background: linear-gradient(to bottom, #435565, #738A9A); 
+    color: #EAE8E5; /* Cor de texto suave para contraste */
+}
+
+header, section, footer {
+    max-width: 800px; 
+    text-align: center; 
+    padding: 20px;
+    margin: 10px;
+    background: rgba(255, 255, 255, 0.1); /* Fundo claro com transparência */
+    border-radius: 10px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+nav ul {
+    list-style: none; 
+    padding: 0; 
+}
+
+nav a {
+    color: #81a6e2; /* Cor dos links de navegação */
+    text-decoration: none; 
+}
+
+nav a:hover {
+    text-decoration: underline; 
+    color: #697773; /* Cor ao passar o mouse */
+}
+
+footer {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #EAE8E5; /* Ajuste da cor para harmonizar com o fundo */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+footer:hover {
+    background-color: #738A9A; 
+    color: #EAE8E5; 
+}
+
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #435565;
+    color: #EAE8E5;
+    border: none;
+    border-radius: 50%; 
+    padding: 10px;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease; 
+    opacity: 0; 
+}
+
+#backToTop.visible {
+    display: flex; 
+    opacity: 1;
+    transform: translateY(0); 
+}
+
+#backToTop:hover {
+    background-color: #697773; 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    transform: scale(1.1); 
+}
+
+.fade-in-up, .fade-in-left, .fade-in-right {
+    opacity: 0;
+    transform: translateY(30px); 
+    transition: opacity 1.2s ease-out, transform 1.8s ease-out;
+}
+
+.fade-in-left {
+    transform: translateX(-30px);
+}
+
+.fade-in-right {
+    transform: translateX(30px); 
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+h2, h3 {
+    transition: color 0.3s ease, text-shadow 0.3s ease; 
+    color: #EAE8E5; /* Cor das letras nos títulos */
+}
+
+h2:hover, h3:hover {
+    color: #697773; 
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); 
+}
